@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdbreact';
+
+class Education extends Component {
+  render (){
+    return(
+      <MDBCard className='grow' style={{ width: "650px", background: "white", margin:"10px"}}>
+        <MDBCardBody>
+          <MDBCardTitle className='h1-responsive' style={{color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Eductaion</MDBCardTitle>
+          <MDBCardText  style={{color:'#263238'}}>
+            <table>
+              <tr style={{height:'auto'}}>
+                <th style={{fontSize:'3vh', color:'#263238', fontWeight:'bold'}}>JIMMA UNIVERSITY (2010 - 2015)</th>
+              </tr>
+              <tr style={{height:'auto'}}>
+                <th style={{fontSize:'2.5vh', color:'#263238', fontWeight:'bold'}}>Bachelor Degree in Civil Engineering</th>
+              </tr>
+          </table>
+          </MDBCardText>
+        </MDBCardBody>
+      </MDBCard>
+    );
+  }
+}
+
+export default Education;

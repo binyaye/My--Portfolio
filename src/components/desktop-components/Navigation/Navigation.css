@@ -1,0 +1,48 @@
+.navbar {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  transition: top 0.6s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  padding: 10px;
+  height: auto;
+  margin:'0px';
+  background-color:#263238;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+  z-index: 100;
+}
+
+.navbar--hidden {
+  top: -100px;
+}
+.nav-style {
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  padding: 10px;
+  height: auto;
+  margin:'0px';
+  background-color:#263238;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+  z-index: 100;
+}
+
+.border{
+position: fixed; 
+  z-index: 100;
+  border-radius: 10px;
+  border-color: white;
+  border-width: thick;
+  border-style: solid;
+
+}

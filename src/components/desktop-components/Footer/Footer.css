@@ -1,0 +1,10 @@
+.footer-style {
+  background: #3e2723;
+  position: absolute;
+  height: 2.5rem;
+  bottom: 0;
+  
+}
+.center {
+  justify-content: center;
+}

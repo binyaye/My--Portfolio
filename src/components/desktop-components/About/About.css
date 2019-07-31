@@ -1,0 +1,27 @@
+.fullScreen{
+  display: flex;
+  flex-direction: column;
+  color:inherit;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  margin-top: 10vh;
+  width: auto;
+  height: auto;
+  min-height: 100vh;
+}
+.skill-bar {
+  position: relative;
+  height: 20px;
+  width: auto;
+  border-radius: 50px;
+  border: 1px solid #263238;
+}
+
+.filler{
+  background: #263238;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 3s easein;
+}
