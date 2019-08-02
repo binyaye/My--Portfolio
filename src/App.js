@@ -3,7 +3,7 @@ import Navigation from './components/desktop-components/Navigation/Navigation';
 import Footer from './components/desktop-components/Footer/Footer';
 import MobVersion from './AppMob';
 import './App.css';
-import NotFound from './components/desktop-components/notfound';
+
 
 const initialState = {
 	width: window.innerWidth,

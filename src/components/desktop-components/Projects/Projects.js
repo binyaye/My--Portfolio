@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Projects.css';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCol } from 'mdbreact';
 
 class Projects extends Component{
   render () {
@@ -10,32 +10,24 @@ class Projects extends Component{
                 <MDBCard  style={{ width: "650px", background: "white", margin:"10px", height:'auto'}}>
                   <MDBCardImage  className="img-fluid" style={{height: '60%', width: '100%'}} alt='logo' src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
                   <MDBCardBody>
-                    <MDBCardTitle className='h1-responsive' style={{color:'#26293A'}}>Mobile Apps</MDBCardTitle>
-                    <MDBCardText  style={{color:'#26293A'}}>
-                      <ul className='h5-responsive' style={{color:'#26293A'}}>
-                        <li>Ethio Puzzle Game</li>
-                        <li>Top Achievement Quotes</li>
-                        <li>Wow Love Stories</li>
-                        <li>Ethiopian Zink</li>
-                        <li>Love Calculator</li>
-                        <li>Relationship Advices</li>
-                    </ul>
-                    </MDBCardText>
-                    <MDBBtn href="https://play.google.com/store/apps/developer?id=BBJ%20ETHIOPIA&hl=en" style={{flexDirection: "row", backgroundColor:'#3e2723', backgroundImage:"url({https://mdbootstrap.com/img/Photos/Others/images/43.jpg})"}}>Get it on Google Play</MDBBtn>
+                    <MDBCardTitle className='h1-responsive' style={{color:'#26293A', marginLeft:'10px'}}>Mobile Apps</MDBCardTitle>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.byc3.ethiopuzzle">Ethio Puzzle</a></MDBCardTitle>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.byc3.inspirationalquotes">Top Achievement Quotes</a></MDBCardTitle>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.byc.amhariclove">Wow Love Stories</a></MDBCardTitle>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.byc2.bman202.feta">Ethiopian Zink</a></MDBCardTitle>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.byc3.lovecalculator">Love Calculator</a></MDBCardTitle>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.bbjethiopia.relationshipadvices">Relationship Advices</a></MDBCardTitle>
+                    <MDBBtn color='mdb-color' href="https://play.google.com/store/apps/developer?id=Binyam+Tadele" className="grow" style={{fontSize:'16px', flexDirection: "row"}}>Get them on Google Play</MDBBtn>
                 </MDBCardBody>
                 </MDBCard>
                 <MDBCard style={{ width: "650px", margin:'10px', background: "white", height:'auto'}}>
                   <MDBCardImage  className="img-fluid" style={{height: '60%', width: '100%'}} alt='logo' src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
                   <MDBCardBody>
                     <MDBCardTitle className='h1-responsive' style={{color:'#26293A'}}>Web Apps</MDBCardTitle>
-                    <MDBCardText  style={{color:'#26293A'}}>
-                      <ul className='h5-responsive' style={{color:'#26293A'}}>
-                        <li>RoboFriend</li>
-                        <li>Smart Brain</li>
-                        <li>Movie Search</li>
-                    </ul>
-                    </MDBCardText>
-                    <MDBBtn href="https://play.google.com/store/apps/developer?id=BBJ%20ETHIOPIA&hl=en" style={{flexDirection: "row", backgroundColor:'#3e2723', backgroundImage:"url({https://mdbootstrap.com/img/Photos/Others/images/43.jpg})"}}>Get it on GitHub</MDBBtn>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://github.com/binyaye/robofriends-app">RoboFriend</a></MDBCardTitle>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://github.com/binyaye/background-generator">Background Generator</a></MDBCardTitle>
+                    <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://github.com/binyaye/facerecognitionbrain">Face Recognition Brain</a></MDBCardTitle>
+                    <MDBBtn color='mdb-color' className='grow' href="https://github.com/binyaye" style={{fontSize:'16px', flexDirection: "row"}}>View My GitHub Profile</MDBBtn>
                 </MDBCardBody>
                 </MDBCard>
               </MDBCol>

@@ -26,6 +26,7 @@ class Skills extends Component {
           <MDBCardTitle className="h1-responsive" style={{color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Skills</MDBCardTitle>
         <MDBCardText>
             <table style={{width:"75%"}}>
+              <tbody>
               <tr>
                 <td className="h3-responsive" style={{color:'#263238'}}>HTML5</td>
               <td><ProgressBar className='br3' percentage={html5} /></td>
@@ -62,6 +63,7 @@ class Skills extends Component {
                 <td className="h3-responsive" style={{color:'#263238'}}>Dart</td>
               <td><ProgressBar className='br3' percentage={dart} /></td>
               </tr>
+              </tbody>
             </table>
           </MDBCardText>
         </MDBCardBody>

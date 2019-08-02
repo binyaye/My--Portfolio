@@ -59,7 +59,7 @@ class NavigationMob extends Component {
             <ul className={classnames('border', {
           "navbar--hidden": !this.state.visible
         })} style={{listStyleType:'none', position:'fixed', minWidth:"100%", height:'auto', zIndex:'100', marginTop:'0px', paddingBottom:'15px', paddingTop:'15px', paddingLeft:'30px', background:'#263238'}}>
-              <li><Link to="/" onClick={this.onNavigationItemClicked} id="home" style={{color:"black", fontSize:'3.5vh', fontWeight:'bold'}}>Home</Link></li>
+              <li><Link to="/" id="home" style={{color:"black", fontSize:'3.5vh', fontWeight:'bold'}}>Home</Link></li>
               <li><Link to="/about" onClick={this.onNavigationItemClicked} id="about" style={{color:"white", fontSize:'3.5vh', fontWeight:'bold'}}>About</Link></li>
               <li><Link to="/projects" onClick={this.onNavigationItemClicked} id="projects" style={{color:"white", fontSize:'3.5vh', fontWeight:'bold'}}>Projects</Link></li>
               <li><Link to="/contact" onClick={this.onNavigationItemClicked} id="contact" style={{color:"white", fontSize:'3.5vh', fontWeight:'bold'}}>Contact</Link></li>

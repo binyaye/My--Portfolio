@@ -13,7 +13,7 @@ class Profile extends Component {
         <MDBCardImage  className='bg img-fluid' style={{height: 'auto', width: 'auto'}} alt='logo' src={ ProfileImage } />
         <MDBCardBody>
         <MDBCardTitle className="h1-responsive" style={{color:'#263238', fontWeight:'bold'}}>Binyam Tadele</MDBCardTitle>
-        <MDBCardText  style={{color:'#263238', fontSize:'2.5vh'}}><h4>Mobile App & Front-End Web Developer</h4></MDBCardText>
+        <MDBCardText className="h4-responsive" style={{color:'#263238', fontSize:'2.5vh'}}>Mobile App & Front-End Web Developer</MDBCardText>
         <MDBCardText  style={{color:'#263238', fontStyle:'italic', fontSize:'2.5vh'}}>I've worked in construction industry but finally get excited after discovering and start working on my passion for Mobile Application & Web development since 2016. I’m looking forward to bringing that passion to advanced role and problem solving.</MDBCardText>
         <MDBRow className='start' style={{paddingLeft:'10px'}}>
             <MDBCol md="0" style={{paddingRight:'10px'}}>
