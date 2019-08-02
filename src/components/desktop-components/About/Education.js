@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardTitle } from 'mdbreact';
 
 class Education extends Component {
   render (){
@@ -7,7 +7,7 @@ class Education extends Component {
       <MDBCard className='grow' style={{ width: "650px", background: "white", margin:"10px"}}>
         <MDBCardBody>
           <MDBCardTitle className='h1-responsive' style={{color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Eductaion</MDBCardTitle>
-          <MDBCardText  style={{color:'#263238'}}>
+          
             <table>
               <tbody>
                 <tr style={{height:'auto'}}>
@@ -18,7 +18,7 @@ class Education extends Component {
                 </tr>
               </tbody>
           </table>
-          </MDBCardText>
+       
         </MDBCardBody>
       </MDBCard>
     );

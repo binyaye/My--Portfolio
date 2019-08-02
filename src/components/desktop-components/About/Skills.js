@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardTitle } from 'mdbreact';
 import ProgressBar from './ProgressBar';
 
 class Skills extends Component {
@@ -24,7 +24,6 @@ class Skills extends Component {
       <MDBCard className='grow' style={{ width: "650px", background: "white", margin:"10px"}}>
         <MDBCardBody>
           <MDBCardTitle className="h1-responsive" style={{color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Skills</MDBCardTitle>
-        <MDBCardText>
             <table style={{width:"75%"}}>
               <tbody>
               <tr>
@@ -65,7 +64,6 @@ class Skills extends Component {
               </tr>
               </tbody>
             </table>
-          </MDBCardText>
         </MDBCardBody>
       </MDBCard>
     );
