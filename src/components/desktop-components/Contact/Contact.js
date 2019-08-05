@@ -1,46 +1,92 @@
 import React, { Component } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreact';
 import '../About/About.css'
+import firebase from './config.js';
 
 class Contact extends Component{
 
-  constructor(props){
-    super(props);
+  constructor() {
+    super();
     this.state = {
       from: '',
       subject: '',
-      message: ''
+      message:'',
+      contact: []
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  onEmailChange = (event) =>{
-    this.setState({from: event.target.value})
-    console.log(event.target.value);
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
-
-  onSubjectChange = (event) =>{
-    this.setState({subject: event.target.value})
-    console.log(event.target.value);
+  handleSubmit(e) {
+    e.preventDefault();
+    const messagesRef = firebase.database().ref('messages');
+    const contactUs = {
+      sender: this.state.from,
+      messageSubject: this.state.subject,
+      body: this.state.message
+    }
+    messagesRef.push(contactUs);
+    this.setState({
+      from: '',
+      subject: '',
+      message:''
+    });
   }
-
-  onMessageChange = (event) =>{
-    this.setState({message: event.target.value})
-    console.log(event.target.value);
+  componentDidMount() {
+    const messagesRef = firebase.database().ref('messages');
+    messagesRef.on('value', (snapshot) => {
+      let contact = snapshot.val();
+      let newState = [];
+      for (let sender in contact) {
+        newState.push({
+          id: sender,
+          sender: contact[sender].from,
+          messageSubject: contact[sender].subject,
+          body: contact[sender].message
+        });
+      }
+      this.setState({
+        contact: newState
+      });
+    });
   }
+  // removeItem(itemId) {
+  //   const itemRef = firebase.database().ref(`/items/${itemId}`);
+  //   itemRef.remove();
+  // }
 
-  onSubmit = () =>{
-    fetch('http://localhost:3002/contact', {
-      method: 'post',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        from: this.state.from,
-        subject: this.state.subject,
-        message: this.state.message
-      })
-    })
-    .then(response => response.json())
+  // onEmailChange = (event) =>{
+  //   this.setState({from: event.target.value})
+  //   console.log(event.target.value);
+  // }
+
+  // onSubjectChange = (event) =>{
+  //   this.setState({subject: event.target.value})
+  //   console.log(event.target.value);
+  // }
+
+  // onMessageChange = (event) =>{
+  //   this.setState({message: event.target.value})
+  //   console.log(event.target.value);
+  // }
+
+  // onSubmit = () =>{
+  //   fetch('http://localhost:3002/contact', {
+  //     method: 'post',
+  //     headers: {'Content-Type': 'application/json'},
+  //     body: JSON.stringify({
+  //       from: this.state.from,
+  //       subject: this.state.subject,
+  //       message: this.state.message
+  //     })
+  //   })
+  //   .then(response => response.json())
   
-  }
+  // }
 
   render () {
     return (
@@ -59,7 +105,7 @@ class Contact extends Component{
                       validate
                       error="wrong"
                       name="from"
-                      onChange={this.onEmailChange}
+                      onChange={this.handleChange} 
                       success="right"/>
                     <MDBInput style={{color:'white'}}
                       label="Subject"
@@ -68,7 +114,7 @@ class Contact extends Component{
                       type="text"
                       validate
                       name="subject"
-                      onChange={this.onSubjectChange}
+                      onChange={this.handleChange} 
                       error="wrong"
                       success="right"/>
                     <MDBInput style={{color:'white'}}
@@ -76,12 +122,12 @@ class Contact extends Component{
                       type="textarea"
                       require="required"
                       name="message"
-                      onChange={this.onMessageChange}
+                      onChange={this.handleChange} 
                       icon="pencil-alt"
                       rows="4"/>
                 </div>
                 <div className="text-center">
-                  <MDBBtn outline color ="white" onClick={this.onSubmit}>
+                  <MDBBtn outline color ="white" onClick={this.handleSubmit}>
                     Send <MDBIcon far icon="paper-plane" className="ml-1" />
                   </MDBBtn>
                 </div>

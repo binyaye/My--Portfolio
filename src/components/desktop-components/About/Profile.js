@@ -17,16 +17,16 @@ class Profile extends Component {
         <MDBCardText  style={{color:'#263238', fontStyle:'italic', fontSize:'2.5vh'}}>I've worked in construction industry but finally get excited after discovering and start working on my passion for Mobile Application & Web development since 2016. I’m looking forward to bringing that passion to advanced role and problem solving.</MDBCardText>
         <MDBRow className='start' style={{paddingLeft:'10px'}}>
             <MDBCol md="0" style={{paddingRight:'10px'}}>
-                <MDBCardImage href="#" style={{height:'40px', width:'40px'}} src={ Github } />
+                <MDBCardImage href="https://github.com/binyaye" style={{height:'40px', width:'40px'}} src={ Github } />
             </MDBCol>
             <MDBCol md="0" style={{paddingRight:'10px'}}>
-                <MDBCardImage href="#" style={{height:'40px', width:'40px'}} src={ Linkedin } />
+                <MDBCardImage href="https://www.linkedin.com/in/binyam-tadele-3b125775/" style={{height:'40px', width:'40px'}} src={ Linkedin } />
             </MDBCol>
             <MDBCol md="0" style={{paddingRight:'10px'}}>
-                <MDBCardImage href="#" style={{height:'40px', width:'40px'}} src={ Stack } />
+                <MDBCardImage href="https://stackoverflow.com/users/7774144/t-binyam" style={{height:'40px', width:'40px'}} src={ Stack } />
             </MDBCol>
             <MDBCol md="0" style={{paddingRight:'10px'}}>
-                <MDBCardImage href="#" style={{height:'40px', width:'40px'}} src={ Upwork } />
+                <MDBCardImage href="https://www.upwork.com/freelancers/~019edf4131004f9864?viewMode=1" style={{height:'40px', width:'40px'}} src={ Upwork } />
             </MDBCol>
           </MDBRow>
         </MDBCardBody>

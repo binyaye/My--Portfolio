@@ -16,6 +16,7 @@ class App extends Component {
 	  this.state = initialState;
 	}
 
+
 	componentWillMount() {
 	  window.addEventListener('resize', this.handleWindowSizeChange);
 	}

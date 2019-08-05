@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './Home.css'
 import background from '../Images/background.png';
+// import firebase from './config.js';
 
 class Home extends Component{
+
 
   render () {   
     return (
@@ -15,6 +17,7 @@ class Home extends Component{
             style={{color:"white", fontSize:'4vw', fontStyle:'italic', display:'flex', flex:'center'}}
             >My portfolio</p>
             
+           
         </div>
 
     )

@@ -4,13 +4,18 @@ import Footer from './components/mobile-components/Footer-Mob/FooterMob';
 import './App.css';
 
 class AppMob extends Component {
+	
+	constructor() {
+		super();
+	}
+	
 	render() {
-  	return (
-  		<div className="App">
-  			<Navigation />
-			<Footer />
-  		</div>
-  	    );
+		return (
+			<div className="AppMob">
+				<Navigation />
+				<Footer />
+			</div>
+		);
 	}
 }
 
