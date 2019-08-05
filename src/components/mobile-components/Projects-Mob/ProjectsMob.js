@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ProjectsMob.css';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCol } from 'mdbreact';
 
 class ProjectsMob extends Component{
   render () {
@@ -17,7 +17,7 @@ class ProjectsMob extends Component{
                     <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.byc2.bman202.feta">Ethiopian Zink</a></MDBCardTitle>
                     <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.byc3.lovecalculator">Love Calculator</a></MDBCardTitle>
                     <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.bbjethiopia.relationshipadvices">Relationship Advices</a></MDBCardTitle>
-                    <MDBBtn color='mdb-color' href="https://play.google.com/store/apps/developer?id=Binyam+Tadele" className="grow" style={{fontSize:'16px', flexDirection: "row"}}>Get them on Google Play</MDBBtn>
+                    <MDBBtn color='mdb-color' href="https://play.google.com/store/apps/developer?id=Binyam+Tadele" className="grow" style={{fontSize:'14px', flexDirection: "row"}}>Get them on Google Play</MDBBtn>
                   </MDBCardBody>
                 </MDBCard>
                 <MDBCard style={{ width: "auto", margin:'10px', background: "white", height:'auto'}}>
@@ -28,7 +28,7 @@ class ProjectsMob extends Component{
                     <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://github.com/binyaye/robofriends-app">RoboFriend</a></MDBCardTitle>
                     <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://github.com/binyaye/background-generator">Background Generator</a></MDBCardTitle>
                     <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://github.com/binyaye/facerecognitionbrain">Face Recognition Brain</a></MDBCardTitle>
-                    <MDBBtn color='mdb-color' className='grow' href="https://github.com/binyaye" style={{fontSize:'16px', flexDirection: "row"}}>View My GitHub Profile</MDBBtn>
+                    <MDBBtn color='mdb-color' className='grow' href="https://github.com/binyaye" style={{fontSize:'14px', flexDirection: "row"}}>View My GitHub Profile</MDBBtn>
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>

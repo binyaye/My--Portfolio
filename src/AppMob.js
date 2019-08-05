@@ -5,10 +5,6 @@ import './App.css';
 
 class AppMob extends Component {
 	
-	constructor() {
-		super();
-	}
-	
 	render() {
 		return (
 			<div className="AppMob">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardTitle } from 'mdbreact';
 import ProgressBar from './ProgressBarMob';
 
 class SkillsMob extends Component {
