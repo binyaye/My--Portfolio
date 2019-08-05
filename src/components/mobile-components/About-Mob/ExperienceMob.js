@@ -6,14 +6,11 @@ class ExperienceMob extends Component {
     return(
       <MDBCard style={{ width: "100%", background: "white", margin:"5px", height:'auto'}}>
         <MDBCardBody>
-          <MDBCardTitle style={{fontSize:'20px', color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Experience</MDBCardTitle>
-          <MDBCardText  style={{color:'#263238'}}>
-            <p style={{fontSize:'14px', color:'#263238', fontWeight:'bold', lineHeight:'0.8'}}>Freelancing (2016 - Present)</p>
-            <p style={{fontSize:'12px', color:'#263238', paddingBottom:'15px'}}><em>Android & Front End Web Developer</em><br></br>Developed & Published 6 Android Apps on Google play store.<br></br> Developed Responsive Web Apps</p>
-            <p style={{fontSize:'14px', color:'#263238', fontWeight:'bold', lineHeight:'0.8'}}>Governmental Construction Bureau (2015 - 2016)</p>
-            <p style={{fontSize:'12px', color:'#263238', lineHeight:'0.8'}}><em>Worked in Governmental institution as Junior Contract Engineer</em></p>
-
-          </MDBCardText>
+          <MDBCardTitle className="h2-responsive" style={{color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Experience</MDBCardTitle>    
+          <MDBCardTitle style={{fontSize:'2.5vh', color:'#263238', fontWeight:'bold', lineHeight:'0.8'}}>Freelancing (2016 - Present)</MDBCardTitle>
+          <MDBCardTitle style={{fontSize:'2vh', color:'#263238', paddingBottom:'15px'}}><em>Android & Front End Web Developer</em><br></br>Developed & Published 6 Android Apps on Google play store.<br></br> Developed Responsive Web Apps</MDBCardTitle>
+          <MDBCardTitle style={{fontSize:'2.5vh', color:'#263238', fontWeight:'bold', lineHeight:'0.8'}}>Governmental Construction Bureau (2015 - 2016)</MDBCardTitle>
+          <MDBCardTitle style={{fontSize:'2vh', color:'#263238', lineHeight:'0.8'}}><em>Worked in Governmental institution as Junior Contract Engineer</em></MDBCardTitle>
         </MDBCardBody>
       </MDBCard>
     );

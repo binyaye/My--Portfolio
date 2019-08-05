@@ -7,7 +7,7 @@ class Education extends Component {
       <MDBCard className='grow' style={{ width: "650px", background: "white", margin:"10px"}}>
         <MDBCardBody>
           <MDBCardTitle className='h1-responsive' style={{color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Eductaion</MDBCardTitle>
-          
+           
             <table>
               <tbody>
                 <tr style={{height:'auto'}}>

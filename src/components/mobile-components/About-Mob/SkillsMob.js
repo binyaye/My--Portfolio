@@ -24,7 +24,7 @@ class SkillsMob extends Component {
       <MDBCard style={{ width: "100%", background: "white", margin:"5px", height:'auto'}}>
         <MDBCardBody>
           <MDBCardTitle style={{fontSize:'20px', color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Skills</MDBCardTitle>
-        <MDBCardText>
+        <MDBCardTitle>
             <table style={{width:"75%"}}>
               <tbody>
               <tr>
@@ -66,7 +66,7 @@ class SkillsMob extends Component {
               </tr>
               </tbody>
             </table>
-          </MDBCardText>
+          </MDBCardTitle>
         </MDBCardBody>
       </MDBCard>
     );

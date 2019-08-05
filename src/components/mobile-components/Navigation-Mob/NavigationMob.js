@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import About from '../About-Mob/AboutMob';
 import Contact from '../Contact-Mob/ContactMob';
 import Projects from '../Projects-Mob/ProjectsMob';
 import Home from '../Home-Mob/HomeMob';
-import NotFound from '../notfound';
 import classnames from "classnames";
 import './NavigationMob.css';
 
@@ -40,7 +39,6 @@ class NavigationMob extends Component {
     });
   };
   onNavigationItemClicked = (event) =>{
-    document.getElementById("notfound").style.display="none";
     document.getElementById("home").style.color = "white";
     document.getElementById('about').style.color = "white";
     document.getElementById("contact").style.color = "white";
@@ -68,9 +66,6 @@ class NavigationMob extends Component {
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/projects" component={Projects} />
-            <Switch>
-            <Route component={NotFound} />
-            </Switch>
           </header>
         </div>
       </Router>

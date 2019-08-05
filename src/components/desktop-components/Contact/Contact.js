@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreact';
-import '../About/About.css'
+import '../About/About.css';
 import firebase from './config.js';
 
 class Contact extends Component{
