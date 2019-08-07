@@ -8,6 +8,8 @@ import classnames from "classnames";
 import './NavigationMob.css';
 
 class NavigationMob extends Component {
+
+  _isMounted = false; 
  constructor(props) {
     super(props);
 
@@ -20,11 +22,13 @@ class NavigationMob extends Component {
   // Adds an event listener when the component is mount.
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    this._isMounted = true;
   }
 
   // Remove the event listener when the component is unmount.
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
+    this._isMounted = false;
   }
 
   handleScroll = () => {

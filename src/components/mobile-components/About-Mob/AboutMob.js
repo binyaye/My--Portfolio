@@ -8,6 +8,8 @@ import Education from './EducationMob';
 
 
 class AboutMob extends Component{
+
+  _isMounted = false;
   constructor(props){
     super(props)
     this.state = {
@@ -22,6 +24,15 @@ class AboutMob extends Component{
       java: props.java,
       dart: props.dart
     }
+  }
+
+  componentDidMount() {
+ 
+    this._isMounted = true;
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
     render(){
       const { html5, css3, bootStrap, javaScript, jquery, react, node, java, dart } = this.state;

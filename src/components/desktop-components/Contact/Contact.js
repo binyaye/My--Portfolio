@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreact';
 import '../About/About.css';
 import firebase from './config.js';
+import { Snackbar } from './snack';
 
 class Contact extends Component{
-
+  _isMounted = false;
   constructor() {
     super();
     this.state = {
@@ -16,6 +18,13 @@ class Contact extends Component{
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  snackbarRef = React.createRef();
+
+  _showSnackbarHandler = () => {
+    this.snackbarRef.current.openSnackBar('Your message has sent successfully!');
+  }
+
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
@@ -29,7 +38,15 @@ class Contact extends Component{
       messageSubject: this.state.subject,
       body: this.state.message
     }
-    messagesRef.push(contactUs);
+    
+    messagesRef.push(contactUs).then((success)=>{
+     console.log('success ', success);
+     this._showSnackbarHandler();
+     swal("Thank you!", "Your message has sent successfully!", "success");     
+    }).catch((err) => {
+      swal(err, "Something went wrong, please enable your internet connection and try again later.", "error"); 
+    });
+
     this.setState({
       from: '',
       subject: '',
@@ -37,13 +54,14 @@ class Contact extends Component{
     });
   }
   componentDidMount() {
+    this._isMounted = true;
     const messagesRef = firebase.database().ref('messages');
     messagesRef.on('value', (snapshot) => {
       let contact = snapshot.val();
       let newState = [];
       for (let sender in contact) {
         newState.push({
-          id: sender,
+          id: contact[sender].from,
           sender: contact[sender].from,
           messageSubject: contact[sender].subject,
           body: contact[sender].message
@@ -88,6 +106,9 @@ class Contact extends Component{
   
   // }
 
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
   render () {
     return (
       <div className="fullScreen">
@@ -105,10 +126,11 @@ class Contact extends Component{
                       validate
                       error="wrong"
                       name="from"
+                      required
                       onChange={this.handleChange} 
                       success="right"/>
                     <MDBInput style={{color:'white'}}
-                      label="Subject"
+                      label="Subject (Optional)"
                       icon="tag"
                       group
                       type="text"
@@ -127,11 +149,12 @@ class Contact extends Component{
                       rows="4"/>
                 </div>
                 <div className="text-center">
-                  <MDBBtn outline color ="white" onClick={this.handleSubmit}>
+                  <MDBBtn outline color ="white" onClick={this.handleSubmit} disabled={!this.state.message}>
                     Send <MDBIcon far icon="paper-plane" className="ml-1" />
                   </MDBBtn>
                 </div>
               </form>
+              <Snackbar ref = {this.snackbarRef} />
             </MDBCol>
           </MDBRow>
         </MDBContainer>

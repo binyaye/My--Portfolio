@@ -16,6 +16,8 @@ class App extends Component {
 	  this.state = initialState;
 	}
 
+	_isMounted = false;
+
 
 	componentWillMount() {
 	  window.addEventListener('resize', this.handleWindowSizeChange);
@@ -23,11 +25,17 @@ class App extends Component {
 
 	componentWillUnmount() {
 	  window.removeEventListener('resize', this.handleWindowSizeChange);
+	  this._isMounted = false;
 	}
 
 	handleWindowSizeChange = () => {
 	  this.setState({ width: window.innerWidth });
 	};
+
+	componentDidMount(){
+		this._isMounted = true;
+	}
+
 
 	render() {
 	  const { width } = this.state;

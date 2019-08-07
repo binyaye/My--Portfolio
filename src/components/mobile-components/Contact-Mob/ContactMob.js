@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreact';
 import '../About-Mob/AboutMob.css';
 import firebase from './mobconfig.js';
+import { Snackbar } from './snack';
 
 class ContactMob extends Component{
 
@@ -16,6 +18,12 @@ class ContactMob extends Component{
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  snackbarRef = React.createRef();
+
+  _showSnackbarHandler = () => {
+    this.snackbarRef.current.openSnackBar('Your message has sent successfully!');
+  }
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
@@ -29,7 +37,14 @@ class ContactMob extends Component{
       messageSubject: this.state.subject,
       body: this.state.message
     }
-    messagesRef.push(contactUs);
+    messagesRef.push(contactUs).then((success)=>{
+      console.log('success ', success);
+      this._showSnackbarHandler();
+      swal("Thank you!", "Your message has sent successfully!", "success"); 
+     }).catch((err) => {
+      swal(err, "Your message has sent successfully!", "success"); 
+     });
+
     this.setState({
       from: '',
       subject: '',
@@ -74,7 +89,7 @@ class ContactMob extends Component{
                       onChange={this.handleChange} 
                       success="right"/>
                     <MDBInput style={{color:'white'}}
-                      label="Subject"
+                      label="Subject (Optional)"
                       icon="tag"
                       group
                       type="text"
@@ -87,17 +102,18 @@ class ContactMob extends Component{
                       label="Your message"
                       type="textarea"
                       require="required"
-                      name="body"
+                      name="message"
                       onChange={this.handleChange} 
                       icon="pencil-alt"
                       rows="4"/>
                 </div>
                 <div className="text-center">
-                  <MDBBtn outline color ="white" onClick={this.handleSubmit}>
+                  <MDBBtn outline color ="white" onClick={this.handleSubmit} disabled={!this.state.message}>
                     Send <MDBIcon far icon="paper-plane" className="ml-1" />
                   </MDBBtn>
                 </div>
               </form>
+              <Snackbar ref = {this.snackbarRef} />
             </MDBCol>
           </MDBRow>
         </MDBContainer>

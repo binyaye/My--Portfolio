@@ -16,18 +16,18 @@ class ProfileMob extends Component {
         <MDBCardText  style={{color:'#263238', fontStyle:'italic'}}>Mobile App & Front-End Web Developer</MDBCardText>
         <MDBCardText style={{color:'#263238', fontStyle:'italic'}}>I've worked in construction industry but finally get excited after discovering and start working on my passion for Mobile Application & Web development since 2016. I’m looking forward to bringing that passion to advanced role and problem solving.</MDBCardText>
         <MDBRow className='start' style={{paddingLeft:'5px'}}>
-            <MDBCol md="0" style={{paddingRight:'5px'}}>
-                <MDBCardImage href="#" style={{height:'25px', width:'25px'}} src={ Github } />
-            </MDBCol>
-            <MDBCol md="0" style={{paddingRight:'5px'}}>
-                <MDBCardImage href="#" style={{height:'25px', width:'25px'}} src={ Linkedin } />
-            </MDBCol>
-            <MDBCol md="0" style={{paddingRight:'5px'}}>
-                <MDBCardImage href="#" style={{height:'25px', width:'25px'}} src={ Stack } />
-            </MDBCol>
-            <MDBCol md="0" style={{paddingRight:'5px'}}>
-                <MDBCardImage href="#" style={{height:'25px', width:'25px'}} src={ Upwork } />
-            </MDBCol>
+          <MDBCol md="0" style={{paddingRight:'5px'}}>
+            <a href="https://github.com/binyaye"><img alt="Github" style={{height:'25px', width:'25px'}} src={ Github } /></a>
+          </MDBCol>
+          <MDBCol md="0" style={{paddingRight:'5px'}}>
+            <a href="https://www.linkedin.com/in/binyam-tadele-3b125775/"><img alt="Linkedin"style={{height:'25px', width:'25px'}} src={ Linkedin } /></a>
+          </MDBCol>
+          <MDBCol md="0" style={{paddingRight:'5px'}}>
+            <a href="https://stackoverflow.com/users/7774144/t-binyam"><img alt="Stack" style={{height:'25px', width:'25px'}} src={ Stack } /></a>
+          </MDBCol>
+          <MDBCol md="0" style={{paddingRight:'5px'}}>
+          <a href="https://www.upwork.com/freelancers/~019edf4131004f9864?viewMode=1"><img alt="Upwork"style={{height:'25px', width:'25px'}} src={ Upwork } /></a>
+          </MDBCol>
           </MDBRow>
         </MDBCardBody>
       </MDBCard>

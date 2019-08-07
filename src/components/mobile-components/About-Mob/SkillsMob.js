@@ -23,45 +23,45 @@ class SkillsMob extends Component {
     return(
       <MDBCard style={{ width: "100%", background: "white", margin:"5px", height:'auto'}}>
         <MDBCardBody>
-          <MDBCardTitle style={{fontSize:'20px', color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Skills</MDBCardTitle>
+          <MDBCardTitle className="h1-responsive" style={{color:'#ffffff', fontWeight:'bold', backgroundColor:'#263238'}}>Skills</MDBCardTitle>
         <MDBCardTitle>
             <table style={{width:"75%"}}>
               <tbody>
               <tr>
-                <td style={{fontSize:'12px', color:'#263238'}}>HTML5</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>HTML5</td>
               <td><ProgressBar className='br3' percentage={html5} /></td>
               </tr>
               <tr>
-                <td style={{fontSize:'12px', color:'#263238'}}>CSS3</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>CSS3</td>
               <td><ProgressBar className='br3' percentage={css3} /></td>
               </tr>
               <tr>
-                <td style={{fontSize:'12px', color:'#263238'}}>Bootstrap</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>Bootstrap</td>
               <td><ProgressBar className='br3' percentage={bootStrap} /></td>
               </tr>
               <tr>
-                <td style={{fontSize:'12px', color:'#263238'}}>JavaScript</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>JavaScript</td>
               <td><ProgressBar className='br3' percentage={javaScript} /></td>
               </tr>
               <tr>
 
-                <td style={{fontSize:'12px', color:'#263238'}}>jQuery</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>jQuery</td>
               <td><ProgressBar className='br3' percentage={jquery} /></td>
               </tr>
               <tr>
-                <td style={{fontSize:'12px', color:'#263238'}}>React.js</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>React.js</td>
               <td><ProgressBar className='br3' percentage={react} /></td>
               </tr>
               <tr>
-                <td style={{fontSize:'12px', color:'#263238'}}>Node.js</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>Node.js</td>
               <td><ProgressBar className='br3' percentage={node} /></td>
               </tr>
               <tr>
-                <td style={{fontSize:'12px', color:'#263238'}}>Java</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>Java</td>
               <td><ProgressBar className='br3' percentage={java} /></td>
               </tr>
               <tr>
-                <td style={{fontSize:'12px', color:'#263238'}}>Dart</td>
+                <td style={{fontSize:'16px', color:'#263238'}}>Dart</td>
               <td><ProgressBar className='br3' percentage={dart} /></td>
               </tr>
               </tbody>

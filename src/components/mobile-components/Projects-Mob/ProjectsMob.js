@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './ProjectsMob.css';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCol } from 'mdbreact';
+import MobileApps from '../Images-Mob/mobAppmpob.jpg';
+import WebApps from '../Images-Mob/webAppMob.jpg';
 
 class ProjectsMob extends Component{
   render () {
@@ -8,7 +10,7 @@ class ProjectsMob extends Component{
       <div className='fullScreen'>
               <MDBCol className='br3 pa3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 site-content' style={{width: 'auto',  display: 'flex',  flexWrap: "wrap", height:'auto', justifyContent:'center'}}>
                 <MDBCard  style={{ width: "auto", background: "white", margin:"10px", height:'auto'}}>
-                  <MDBCardImage  className="img-fluid" style={{height: '60%', width: '100%'}} alt='logo' src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+                  <MDBCardImage  className="img-fluid" style={{height: '60%', width: '100%'}} src={ MobileApps } waves />
                   <MDBCardBody>
                     <MDBCardTitle className='h3-responsive' style={{color:'#26293A'}}>Mobile Apps</MDBCardTitle>
                     <MDBCardTitle className='h3-responsive underline-hover'><a style={{color:'#26293A'}} href="https://play.google.com/store/apps/details?id=com.byc3.ethiopuzzle">Ethio Puzzle</a></MDBCardTitle>
@@ -21,7 +23,7 @@ class ProjectsMob extends Component{
                   </MDBCardBody>
                 </MDBCard>
                 <MDBCard style={{ width: "auto", margin:'10px', background: "white", height:'auto'}}>
-                  <MDBCardImage  className="img-fluid" style={{height: '60%', width: '100%'}} alt='logo' src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+                  <MDBCardImage  className="img-fluid" style={{height: '60%', width: '100%'}} alt='logo' src={ WebApps } waves />
                   <MDBCardBody>
                     <MDBCardTitle className='h3-responsive' style={{color:'#26293A'}}>Web Apps</MDBCardTitle>
                     <MDBCardTitle className='h1-responsive' style={{color:'#26293A'}}>Web Apps</MDBCardTitle>
