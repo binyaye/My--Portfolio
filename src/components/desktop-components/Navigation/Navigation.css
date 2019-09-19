@@ -10,35 +10,43 @@
   min-width: 100%;
   padding: 10px;
   height: auto;
-  margin:'0px';
-  background-color:#263238;
+  margin: '0px';
+  background-color: #babbbb;
   font-family: monospace;
   font-weight: bold;
   color: white;
   z-index: 100;
 }
 
+
+@media only screen and (min-width: 576px) {
+  .navbar-list .chosen {
+    border-bottom: 2px solid white;
+  }
+}
+
 .navbar--hidden {
   top: -100px;
 }
+
 .nav-style {
- 
+
   top: 0;
   left: 0;
   width: 100%;
   min-width: 100%;
   padding: 10px;
   height: auto;
-  margin:'0px';
-  background-color:#263238;
+  margin: '0px';
+  background-color: #263238;
   font-family: monospace;
   font-weight: bold;
   color: white;
   z-index: 100;
 }
 
-.border{
-position: fixed; 
+.border {
+  position: fixed;
   z-index: 100;
   border-radius: 10px;
   border-color: white;
