@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import "./Navigation.css";
 import { Nav, Navbar } from "react-bootstrap";
-import {
-  Route,
-  Link,
-  NavLink,
-  BrowserRouter as Router
-} from "react-router-dom";
+import { Route, NavLink, BrowserRouter as Router } from "react-router-dom";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Projects from "../Projects/Projects";
