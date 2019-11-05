@@ -9,7 +9,10 @@
     "react": "^16.8.2",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.8.2",
+    "react-redux-form": "^1.16.8",
     "react-scripts": "2.1.5",
+    "react-transition-group": "^2.3.0",
+    "reactstrap": "^8.1.1",
     "sweetalert": "^2.1.2",
     "tachyons": "^4.11.1"
   },

@@ -1,4 +1,48 @@
-.App {
-  background: #263238;
-  margin:0px;
+.navbar-dark {
+  background-color: #263238;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  padding-top: 10px;
+  margin-top: 10vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 80%;
+  min-width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: floralwhite;
+}
+
+.footer {
+  background-color: #263238;
+  color: white;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #263238;
+}
+
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+
+.address {
+  color: white;
 }

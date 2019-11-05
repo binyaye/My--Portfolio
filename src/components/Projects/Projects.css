@@ -61,17 +61,3 @@ address{
     color: rgba(38, 41, 58, 1);
     padding-bottom: 30px;
 }
-
-.footer-image {
-  width:40px;
-  height:40px;
-  padding-left: 7px
-}
-
-td {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 2.0;
-  list-style: circle;
-  line-height: 2;
-}
