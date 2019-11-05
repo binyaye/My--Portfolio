@@ -25,7 +25,7 @@ const Projects = () => {
           <BreadcrumbItem active>Projects</BreadcrumbItem>
         </Breadcrumb>
         <div className="col-12">
-          <h3>About Us</h3>
+          <h3>Projects</h3>
           <hr />
         </div>
       </div>
