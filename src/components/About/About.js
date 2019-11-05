@@ -261,7 +261,7 @@ const About = props => {
           <BreadcrumbItem>
             <Link to="/home">Home</Link>
           </BreadcrumbItem>
-          <BreadcrumbItem active>About Me</BreadcrumbItem>
+          <BreadcrumbItem active>About</BreadcrumbItem>
         </Breadcrumb>
         <div className="col-12">
           <h3>About Me</h3>
