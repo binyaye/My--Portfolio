@@ -105,6 +105,7 @@ const Projects = () => {
                 Relationship Advices
               </a>
             </CardHeader>
+            <hr />
             <Button
               color="dark"
               outline
@@ -158,6 +159,7 @@ const Projects = () => {
                 Face Recognition Brain
               </a>
             </CardHeader>
+            <hr />
             <Button
               color="dark"
               outline
