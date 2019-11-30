@@ -3,9 +3,10 @@ import Header from "./Header";
 import About from "./About/About";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import Footer from "./FooterComponent";
 import background from "./Images/background.png";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class Main extends Component {
   constructor(props) {
@@ -67,22 +68,30 @@ class Main extends Component {
     };
 
     return (
-      <div className="App">
+      <div>
         <Header />
-        <Switch>
-          <Route path="/home" component={Home} />
-          <Route exact path="/contact" component={Contact} />
-          <Route
-            path="/about"
-            component={() => <About skills={this.state.skills} />}
-          />
-          <Route exact path="/projects" component={Projects} />
-          <Redirect to="/home" />
-        </Switch>
+        <TransitionGroup>
+          <CSSTransition
+            key={this.props.location.key}
+            classNames="page"
+            timeout={300}
+          >
+            <Switch location={this.props.location}>
+              <Route path="/home" component={Home} />
+              <Route exact path="/contact" component={Contact} />
+              <Route
+                path="/about"
+                component={() => <About skills={this.state.skills} />}
+              />
+              <Route exact path="/projects" component={Projects} />
+              <Redirect to="/home" />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
         <Footer />
       </div>
     );
   }
 }
 
-export default Main;
+export default withRouter(Main);

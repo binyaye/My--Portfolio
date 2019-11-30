@@ -20,7 +20,7 @@ function Footer(props) {
                 <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="/project">Project</Link>
+                <Link to="/projects">Project</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
@@ -34,9 +34,9 @@ function Footer(props) {
               <br />
               Ethiopia
               <br />
-              <i className="fa fa-phone fa-lg"></i>: +251 92901 3390
+              <i className="fa fa-phone fa-lg"></i> : +251 92901 3390
               <br />
-              <i className="fa fa-envelope fa-lg"></i>:{" "}
+              <i className="fa fa-envelope fa-lg"></i> :{" "}
               <a href="mailto:binyadis@gmail.com">binyadis@gmail.com</a>
             </address>
           </div>

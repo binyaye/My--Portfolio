@@ -14,6 +14,7 @@ import {
 import firebase from "./config.js";
 import { Snackbar } from "./snack";
 import { Link } from "react-router-dom";
+import { FadeTransform, Fade, Stagger } from "react-animation-components";
 
 class Contact extends Component {
   _isMounted = false;
@@ -139,93 +140,108 @@ class Contact extends Component {
     );
     return (
       <div className="container">
-        <div className="row">
-          <Breadcrumb>
-            <BreadcrumbItem>
-              <Link to="/home">Home</Link>
-            </BreadcrumbItem>
-            <BreadcrumbItem active>Contact</BreadcrumbItem>
-          </Breadcrumb>
-          <div className="col-12">
-            <h3>Contact Me</h3>
-            <hr />
+        <Stagger in>
+          <div className="row">
+            <Breadcrumb>
+              <BreadcrumbItem>
+                <Link to="/home">Home</Link>
+              </BreadcrumbItem>
+              <BreadcrumbItem active>Contact</BreadcrumbItem>
+            </Breadcrumb>
+            <div className="col-12">
+              <Fade in>
+                <h3>Contact Me</h3>
+                <hr />
+              </Fade>
+            </div>
           </div>
-        </div>
-        <div className="row row-content">
-          <div className="col-12">
-            <h3>Send me your Feedback</h3>
+        </Stagger>
+        <Stagger in>
+          <div className="row row-content">
+            <div className="col-12">
+              <Fade in>
+                <h3>Send me your Feedback</h3>
+              </Fade>
+            </div>
+            <div className="col-12 col-md-9">
+              <FadeTransform
+                in
+                transformProps={{
+                  exitTransform: "scale(0.5) translateY(-50%)"
+                }}
+              >
+                <Form onSubmit={this.handleSubmit}>
+                  <FormGroup row>
+                    <Label htmlFor="email" md={2}>
+                      Email
+                    </Label>
+                    <Col md={10}>
+                      <Input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="your email"
+                        value={this.state.email}
+                        valid={errors.email === ""}
+                        invalid={errors.email !== ""}
+                        onBlur={this.handleBlur("email")}
+                        onChange={this.handleChange}
+                      />
+                      <FormFeedback>{errors.email}</FormFeedback>
+                    </Col>
+                  </FormGroup>
+                  <FormGroup row>
+                    <Label htmlFor="subject" md={2}>
+                      Subject
+                    </Label>
+                    <Col md={10}>
+                      <Input
+                        id="subject"
+                        type="text"
+                        name="subject"
+                        placeholder="subject"
+                        value={this.state.subject}
+                        valid={errors.subject === ""}
+                        invalid={errors.subject !== ""}
+                        onBlur={this.handleBlur("subject")}
+                        onChange={this.handleChange}
+                      />
+                      <FormFeedback>{errors.subject}</FormFeedback>
+                    </Col>
+                  </FormGroup>
+                  <FormGroup row>
+                    <Label htmlFor="message" md={2}>
+                      Message
+                    </Label>
+                    <Col md={10}>
+                      <Input
+                        id="message"
+                        type="textarea"
+                        name="message"
+                        placeholder="your message"
+                        value={this.state.message}
+                        valid={errors.message === ""}
+                        invalid={errors.message !== ""}
+                        onBlur={this.handleBlur("message")}
+                        onChange={this.handleChange}
+                        rows="4"
+                      />
+                      <FormFeedback>{errors.message}</FormFeedback>
+                    </Col>
+                  </FormGroup>
+                  <FormGroup row>
+                    <Col md={{ size: 10, offset: 2 }}>
+                      <Button color="primary" disabled={!this.state.message}>
+                        Send
+                      </Button>
+                    </Col>
+                  </FormGroup>
+                </Form>
+              </FadeTransform>
+              <Snackbar ref={this.snackbarRef} />
+            </div>
           </div>
-          <div className="col-12 col-md-9">
-            <Form onSubmit={this.handleSubmit}>
-              <FormGroup row>
-                <Label htmlFor="email" md={2}>
-                  Email
-                </Label>
-                <Col md={10}>
-                  <Input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="your email"
-                    value={this.state.email}
-                    valid={errors.email === ""}
-                    invalid={errors.email !== ""}
-                    onBlur={this.handleBlur("email")}
-                    onChange={this.handleChange}
-                  />
-                  <FormFeedback>{errors.email}</FormFeedback>
-                </Col>
-              </FormGroup>
-              <FormGroup row>
-                <Label htmlFor="subject" md={2}>
-                  Subject
-                </Label>
-                <Col md={10}>
-                  <Input
-                    id="subject"
-                    type="text"
-                    name="subject"
-                    placeholder="subject"
-                    value={this.state.subject}
-                    valid={errors.subject === ""}
-                    invalid={errors.subject !== ""}
-                    onBlur={this.handleBlur("subject")}
-                    onChange={this.handleChange}
-                  />
-                  <FormFeedback>{errors.subject}</FormFeedback>
-                </Col>
-              </FormGroup>
-              <FormGroup row>
-                <Label htmlFor="message" md={2}>
-                  Message
-                </Label>
-                <Col md={10}>
-                  <Input
-                    id="message"
-                    type="textarea"
-                    name="message"
-                    placeholder="your message"
-                    value={this.state.message}
-                    valid={errors.message === ""}
-                    invalid={errors.message !== ""}
-                    onBlur={this.handleBlur("message")}
-                    onChange={this.handleChange}
-                    rows="4"
-                  />
-                  <FormFeedback>{errors.message}</FormFeedback>
-                </Col>
-              </FormGroup>
-              <FormGroup row>
-                <Col md={{ size: 10, offset: 2 }}>
-                  <Button color="primary" disabled={!this.state.message}>
-                    Send
-                  </Button>
-                </Col>
-              </FormGroup>
-            </Form>
-            <Snackbar ref={this.snackbarRef} />
-          </div>
-        </div>
+        </Stagger>
       </div>
     );
   }
