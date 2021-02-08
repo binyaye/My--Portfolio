@@ -159,6 +159,14 @@ const Projects = () => {
               >
                 Web Apps
               </CardHeader>
+               <CardHeader className="h3-responsive underline-hover">
+                <a
+                  style={{ color: "#26293A" }}
+                  href="https://github.com/binyaye/mybooks"
+                >
+                  MyRead
+                </a>
+              </CardHeader>
               <CardHeader className="h3-responsive underline-hover">
                 <a
                   style={{ color: "#26293A" }}
