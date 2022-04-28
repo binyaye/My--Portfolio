@@ -9,7 +9,7 @@
     "@ishawnwang/withunmounted": "^1.0.1",
     "bootstrap": "^4.3.1",
     "bootstrap-social": "^5.1.1",
-    "cross-fetch": "^2.1.0",
+    "cross-fetch": "^3.1.5",
     "firebase": "^6.3.4",
     "font-awesome": "^4.7.0",
     "prop-types": "^15.6.0",
